@@ -1,3 +1,34 @@
+libwacom 2.8:
+- New Devices:
+  - Wacom One, One 12, One 13
+  - XP Pen Deco mini7
+  - HUION H950P (another match for that one)
+  - Samsung Chromebook Plus v2
+  - Nuvision Solo 10 Draw
+
+libwacom 2.7:
+- New Devices:
+  - HP Spectre x360, Envy x360, 
+  - XP-Pen Deco MW, Deco Pro MW, Deco Pro SW
+  - Lenovo Yoga 7, Ideapad Duet 5i
+- Fixed the match for the Huion H950p
+
+libwacom 2.6:
+- New Devices
+  - ASUS ROG Flow X16
+  - XP-Pen Deco01 v2
+  - Huion Kamvas 13
+  - Wacom HID 52FA Pen
+  - Ugee M708 v1
+
+libwacom 2.5:
+- New Devices
+  - Cintiq Pro 27
+  - Intuos Pro Small refresh
+  - Dell Chromebook 11 5190 2-in-1
+  - Dell Inspiron 14 7425 2-in-1
+  - Fujitsu U729X
+
 libwacom 2.4:
 - New Devices:
   - Huion Inspiroy H1060P

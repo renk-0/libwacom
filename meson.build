@@ -1,5 +1,5 @@
 project('libwacom', 'c',
-	version: '2.4.0',
+	version: '2.8.0',
 	license: 'MIT/Expat',
 	default_options: [ 'c_std=gnu99', 'warning_level=2' ],
 	meson_version: '>= 0.51.0')
@@ -136,13 +136,21 @@ endif
 
 ############### tools ###########################
 
+tools_cflags = ['-DDATABASEPATH="@0@"'.format(dir_src_data)]
+
 executable('libwacom-list-local-devices',
 	   'tools/list-local-devices.c',
 	   dependencies: [dep_libwacom, dep_glib, dep_gudev],
 	   include_directories: [includes_src],
 	   install: true)
 
-tools_cflags = ['-DDATABASEPATH="@0@"'.format(dir_src_data)]
+# The non-installed version of list-local-devices uses the git tree's data files
+executable('list-local-devices',
+	   'tools/list-local-devices.c',
+	   dependencies: [dep_libwacom, dep_glib, dep_gudev],
+	   include_directories: [includes_src],
+	   c_args: tools_cflags,
+	   install: false)
 
 updatedb = configure_file(input: 'tools/libwacom-update-db.py',
 			  output: '@BASENAME@',
